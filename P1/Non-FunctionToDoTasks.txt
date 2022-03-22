@@ -1,0 +1,13 @@
+#---Non-Functional---#
+1. Validation
+2. Passwords encrypted
+3. Users cannot change request out of pending
+4. Errors handled gracefully
+5. System conforms to restful
+	1. Uniform interface
+	2. Client-server
+	3. Stateless
+	4. Cachable
+	5. Layered system
+6. tested with 80% line coverage
+7. Logging
