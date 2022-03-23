@@ -1,12 +1,9 @@
 #------Functional-----#
 1. User can register
-2. Admin can approve or denny request
-3. Register user validates login
-4. Authenticated employee can see and manage request
-5. Can view history
-6. Can submit new reimbursment
-7. Finance manager can view all pending request
-8. Manager can see history of requests They approved or denied
-9. Can approve or deny 
-10. Admin can deactivate account
-11. Admin can reset password
+2. Register user validates login
+3. Authenticated employee can see and manage request
+4. Can view history
+5 Can submit new reimbursment
+6 Finance manager can view all pending request
+7 Manager can see history of requests They approved or denied
+8 Can approve or deny 
