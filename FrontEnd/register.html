@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Runtime Terror P1</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+        <script src="JavaScript.js" defer></script>
+    </head>
+    <header>
+        <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
+    </header>
+    <Body>
+        
+        <div class = "login">           
+            <center><div class = "denoter"><p>Register</p></div></center>
+            <form>
+                <center>
+                
+                <div class ="input-box" style = "height: 450px;">
+                <p style = "margin-bottom: 2px; padding-right: 102px;">Username:</P>
+                <input type="text" id="username" name="Username" required />
+                <p style ="margin-bottom: 2px; padding-right: 125px;">Email:</p>
+                <input type ="text" id="email" name ="Email" required />
+                <p style = "margin-bottom: 2px; padding-right: 104px;">Password:</p>
+                <input type="password" id="pwd" name="Password" required />
+                <p style = "margin-bottom: 2px; padding-right: 30px;">Reconfirm password:</p>
+                <input type="password" id="pwd1" name="Password1" required />
+                <p style ="margin-bottom: 2px; padding-right: 90px;">First Name:</p>
+                <input type ="text" id="fName" name ="fName" required />
+                <p style ="margin-bottom: 2px; padding-right: 90px;">Last Name:</p>
+                <input type ="text" id="LName" name ="LName" required /><br><br>
+                
+                <script>
+                    
+                    if (document.getElementById("Employee").checked == true){
+                        document.getElementById("Employee").value =1;
+                        document.getElementById("FinanceManager").value =0;
+                    } else {
+                        document.getElementById("Employee").value =0;
+                        document.getElementById("FinanceManager").value =1;
+                    }
+                </script>
+                <span style ="padding-right: 100px;"><input type = "radio" name ="userid" id ="Employee" checked = "checked">Employee</input><br></span>
+                <span style ="padding-right: 53px;"><input type = "radio" name ="userid" id="FinanceManager">Finance Manager</input></span>
+                <div style = "padding-top: 5px; padding-left: 115px;"><button>Submit</button></div>
+                </div>
+                </center>
+            </form>
+            <center class = "register" style = "padding-right: 280px;"><a href = "index.html">Login</a></center>
+        </div>
+    </Body>
+</html>

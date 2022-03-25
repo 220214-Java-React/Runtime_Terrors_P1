@@ -4,52 +4,42 @@
         <title>Runtime Terror P1</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <meta charset="UTF-8">
+        <script src="./JavaScript.js" defer></script>
     </head>
     <header>
         <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
     </header>
     <Body>
-        <script src="JavaScript.js"></script>
-        <!-- <span hidden> -->
+        <div class = "ad"></div>
+        
         <div class = "login">        
         <center><div class = "denoter"><p>Login</p></div></center>
         <form>
             <center>
-            <div class ="input-box">
+            <div class ="input-box" style = "padding-bottom: 450px;">
             <p style = "margin-bottom: 2px; padding-right: 102px; padding-top: 20px;">Username:</P>
             <input type="text" id="username" name="Username">
             <p style = "margin-bottom: 2px; padding-right: 104px;">Password:</p>
             <input type="password" id="pwd" name="Password"><br>
-            <div style = "padding-top: 5px; padding-left: 115px;"><button>Submit</button></div>
+            <script>
+                function validateLink(){
+                if(document.getElementById("username").input = "admin"){
+                    (document.getElementById("link").href = "vreimbursments.html")
+                }else{
+                    (document.getElementById("link").href = "sreimbursments.html")
+                }
+            }
+                
+            </script>
+            <div style = "padding-top: 5px; padding-left: 115px;">
+                <a href = "link">
+                <button onclick = "validateLink()">
+                    Submit
+                </button>
+            </a>
+            </div>
             </div>
             </center>
         </form>
-        <center class = "register"><button style ="border: 0;
-                                                    color:blue; 
-                                                    text-decoration: underline; 
-                                                    font-size: large;" 
-                                                    onmouseover="this.style.color ='purple'" 
-                                                    onmouseout="this.style.color = 'blue'"
-                                                    onclick="obscure()">Register</button></center>
-    <!-- </span> -->
-    <span hidden>
-        <div class = "login">           
-            <center><div class = "denoter"><p>Register</p></div></center>
-            <form>
-                <center>
-                <div class ="input-box">
-                <p style = "margin-bottom: 2px; padding-right: 102px;">Username:</P>
-                <input type="text" id="username" name="Username">
-                <p style = "margin-bottom: 2px; padding-right: 104px;">Password:</p>
-                <input type="password" id="pwd" name="Password">
-                <p style = "margin-bottom: 2px; padding-right: 30px;">Reconfirm password:</p>
-                <input type="password" id="pwd1" name="Password1"><br>
-                <div style = "padding-top: 5px; padding-left: 115px;"><button>Submit</button></div>
-                </div>
-                </center>
-            </form>
-            <center class = "register"><button>Register</button></center>
-        </span>
-        </div>
-    </Body>
+        <center class = "register" style = "padding-right: 270px;"><a href = "register.html">Register</a></center>
 </html>

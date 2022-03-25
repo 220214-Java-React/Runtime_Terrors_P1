@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Runtime Terror P1</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+        <script src="JavaScript.js" defer></script>
+    </head>
+    <header>
+        <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
+    </header>
+    <body>
+        <center>
+        <div class = "input-box" style ="height: 400px">
+            <h3>Reimbursment</h3><br>
+            <form>
+                <script>
+                    if (document.getElementById("lodging").checked == true){
+                        document.getElementById("lodging").value =1;
+                        document.getElementById("food").value =0;
+                        document.getElementById("travel").value =0;
+                        document.getElementById("other").value =0;
+                    } else if(document.getElementById("travel").checked == true) {
+                        document.getElementById("lodging").value =0;
+                        document.getElementById("travel").value =1;
+                        document.getElementById("food").value =0;
+                        document.getElementById("other").value =0;
+                    } else if(document.getElementById("food").checked == true){
+                        document.getElementById("lodging").value =0;
+                        document.getElementById("travel").value =0;
+                        document.getElementById("food").value =1;
+                        document.getElementById("other").value =0;
+                    } else {
+                        document.getElementById("lodging").value =0;
+                        document.getElementById("travel").value =0;
+                        document.getElementById("food").value =0;
+                        document.getElementById("other").value =1;
+                    }
+                    
+                </script>
+            <input type = "radio" name ="reimbursementId" id="lodging" checked = "checked"/> Lodging<br>
+            <input type="radio" name="reimbursementId" id="travel"/>Travel <br>
+            <input type="radio" name="reimbursementId" id="food"/>Food<br>
+            <input type="radio" name="reimbursementId" id="other"/>Other<br>
+            <input type="text" name ="Amount" id="amount" style="width: 25px"/> $ Amount<br><br>
+            <textarea type="text" name ="Description" id = "description" placeholder="Enter Description of request here"  style ="height: 100px; width: 200px;" />
+            </form>
+        </div>
+        </center>
+    </body>
+</html>

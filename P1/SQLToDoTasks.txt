@@ -1,6 +1,6 @@
 SQL Tables
 	1. ERS_Reimbursments
-		-Primary key Reimb_Id serial
+		-Reimb_Id serial Primary key 
 		-Amount Not Null double precision
 		-Submitted Not Null TimeStap
 		-Resolved TimeStamp
@@ -12,30 +12,28 @@ SQL Tables
 		-constraint FK_Status_ID int foreign key not null
 		-constraint FK_Type_ID int foreign key not null
 	2. ERS_Users
-		-Primary key User_ID serial
+		-User_ID serial Primary key 
 		-Username text unique not null
 		-Email text unique not null
 		-Password text not null
 		-First_Name text not null
 		-Last_Name text not null
-		-Is_Active ???
 		-Constrain FK_Role_ID int from ERS_User_Roles
 	3. ERS_Reimbursement_Statuses
-		-Primary Key Status_ID serial
+		-Status_ID serial Primary Key 
 		-Status unique text
 			-Pending
 			-Approved
 			-Denied
 	4. ERS_Reimbursement_Types
-		-Primary key Type_ID serial
+		-Type_ID serial Primary key 
 		-Type text unique
 			-Lodging
 			-Travel
 			-Food
 			-Other
 	5. ERS_User_Roles
-		-Primary key Roley_ID serial
+		-Role_ID serial Primary key 
 		-Role text unique
-			-Admin??
 			-Finance Manager
 			-Employee

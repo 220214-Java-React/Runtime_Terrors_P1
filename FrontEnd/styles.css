@@ -20,19 +20,16 @@
 .input-box{
     border: 1px solid black;
     width: 322px;
-    height: 225px;
-    background-color: rgb(204, 206, 207);
+    height: 200px;
+    background-color: rgb(228, 228, 228);
 }
 .register{
-    padding-right: 247px; 
-    font-size: x-large;
+    padding-right: 270px; 
+    font-size: large;
+    text-shadow: 2px, 2px, 2px, white; 
 }
 body{
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.212);
 }
-.button-like-link{
-    border: 0; 
-    color:blue; 
-    text-decoration: underline; 
-    font-size: large;
-}
+
