@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Runtime Terror P1</title>
+        <link rel="stylesheet" type="text/css" href="./../CSS/styles.css">
+        <link rel="stylesheet" type="text/css" href="./../CSS/sreimbursments.css">
+        <meta charset="UTF-8">
+        <script src="./../JavaScripts/sreimbursments.js" defer></script>
+    </head>
+    <header>
+        <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
+    </header>
+    <body>
+        <center>
+            <a href = "employe.html"><button>Go back</button></a>
+            <span class = "logout"><a href = "./../index.html"><button>Log out</button></a></span><br><br>
+        <div class = "input-box">
+            <h2>Reimbursment</h2><br>
+            <form method="POST" enctype="multipart/form-data">
+            <input type = "radio" name ="reimbursementId" id="lodging" checked = "checked"><span class = "lodging"> Lodging</span><br>
+            <input type="radio" name="reimbursementId" id="travel"><span class ="travel">Travel </span><br>
+            <input type="radio" name="reimbursementId" id="food" ><span class = "food">Food</span><br>
+            <input type="radio" name="reimbursementId" id="other"><span class ="other">Other</span><br>
+            <input type="text" name ="Amount" id="amount" class="amount">$ Amount<br><br>
+            <textarea type="text" name ="Description" id = "description" placeholder="Enter Description of request here"  class ="description"></textarea>
+            
+            <input type="file" name="myimage" class="file"><br><br>
+            
+            <input type="submit" name="submit_form" value="Submit">
+            </form>
+        </div>
+        </center>
+    </body>
+</html>

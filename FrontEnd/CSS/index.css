@@ -1,0 +1,16 @@
+.username{
+    margin-bottom: 2px; 
+    padding-right: 102px; 
+    padding-top: 20px;
+}
+.password{
+    margin-bottom: 2px; 
+    padding-right: 104px;
+}
+.submit{
+    padding-top: 5px; 
+    padding-left: 115px;
+}
+.register{
+    padding-right: 270px;
+}

@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Runtime Terror P1</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link rel ="stylesheet" type ="text/css" href="CSS/index.css"
         <meta charset="UTF-8">
-        <script src="./JavaScript.js" defer></script>
+        <script src="./JavaScripts/index.js" defer></script>
     </head>
     <header>
         <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
@@ -16,22 +17,13 @@
         <center><div class = "denoter"><p>Login</p></div></center>
         <form>
             <center>
-            <div class ="input-box" style = "padding-bottom: 450px;">
-            <p style = "margin-bottom: 2px; padding-right: 102px; padding-top: 20px;">Username:</P>
+            <div class ="input-box">
+            <p class = "username">Username:</P>
             <input type="text" id="username" name="Username">
-            <p style = "margin-bottom: 2px; padding-right: 104px;">Password:</p>
+            <p class = "password">Password:</p>
             <input type="password" id="pwd" name="Password"><br>
-            <script>
-                function validateLink(){
-                if(document.getElementById("username").input = "admin"){
-                    (document.getElementById("link").href = "vreimbursments.html")
-                }else{
-                    (document.getElementById("link").href = "sreimbursments.html")
-                }
-            }
-                
-            </script>
-            <div style = "padding-top: 5px; padding-left: 115px;">
+            
+            <div class = "submit">
                 <a href = "link">
                 <button onclick = "validateLink()">
                     Submit
@@ -41,5 +33,5 @@
             </div>
             </center>
         </form>
-        <center class = "register" style = "padding-right: 270px;"><a href = "register.html">Register</a></center>
+        <center class = "register" class = "register"><a href = "HTML/register.html">Register</a></center>
 </html>

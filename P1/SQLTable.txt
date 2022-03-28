@@ -1,0 +1,40 @@
+Tables:
+	1. Reimbursments 
+		-id pk serial
+		-amount float
+		-submitted timestamped
+		-resolved timestamped
+		-description text
+		-reciept bytea
+		-payment_id int 
+		-author_id int foriegn key references to id from users
+		-resolver_id int foriegn key references to id from users
+		-status int foriegn key references to id from reimbursment_status
+		-reimbursment_type_id int foriegn key references to id from reimbursment_types
+	2. Users
+		-id pk serial
+		-username text cannot be null
+		-password text cannot be null
+		-first_name text cannot be null
+		-last_name text cannot be null
+		-role_id int foriegn key references to role_id from user_roles
+
+*********From here on will not be tables to be edited but so its an easy reference for data***********
+
+	3. reimbursment_status
+		-id		-status
+			*1		*pending
+			*2		*approved
+			*3		*denied
+	
+	4. reimbursment_types
+		-id		-reimbursment
+			*1		*lodging
+			*2		*travel
+			*3		*food
+			*4		*other
+
+	5. user_roles
+		-role_id	-role
+			*1		*finance_manager
+			*2		*employee

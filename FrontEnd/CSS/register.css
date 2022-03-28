@@ -1,0 +1,40 @@
+.username{
+    margin-bottom: 2px; 
+    padding-right: 102px;
+}
+.password{
+    margin-bottom: 2px; 
+    padding-right: 104px;
+}
+.rpassword{
+    margin-bottom: 2px; 
+    padding-right: 30px;
+}
+.email{
+    margin-bottom: 2px; 
+    padding-right: 125px;
+}
+.fname{
+    margin-bottom: 2px; 
+    padding-right: 90px;
+}
+.lname{
+    margin-bottom: 2px; 
+    padding-right: 90px;
+}
+.employee{
+    padding-right: 100px;
+}
+.financemanager{
+    padding-right: 53px;
+}
+.submit{
+    padding-top: 5px; 
+    padding-left: 115px;
+}
+.register{
+    padding-right: 280px;
+}
+.input-box{
+    height: 450px;
+}

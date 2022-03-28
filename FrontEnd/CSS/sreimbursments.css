@@ -1,0 +1,27 @@
+.lodging{
+    padding-right: 55px;
+}
+.travel{
+    padding-right: 73px;
+}
+.food{
+    padding-right: 81px;
+}
+.other{
+    padding-right: 77px;
+}
+.amount{
+    width: 50px;
+}
+.description{
+    height: 100px; width: 200px;
+}
+.file{
+    padding-left: 45px;
+}
+.input-box{
+    height: 400px;
+}
+.logout{
+    padding-left: 50px;
+}
