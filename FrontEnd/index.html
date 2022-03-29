@@ -5,10 +5,11 @@
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
         <link rel ="stylesheet" type ="text/css" href="CSS/index.css"
         <meta charset="UTF-8">
-        <script src="./JavaScripts/index.js" defer></script>
+        <script type="text/javascript" src="./JavaScripts/index.js" defer></script>
     </head>
     <header>
         <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
+        
     </header>
     <Body>
         <div class = "ad"></div>
@@ -24,11 +25,9 @@
             <input type="password" id="pwd" name="Password"><br>
             
             <div class = "submit">
-                <a href = "link">
-                <button onclick = "validateLink()">
-                    Submit
-                </button>
-            </a>
+                <span class = "mployee"><input type = "radio" name ="userid" id ="Employee" checked>Employee</input><br></span>
+                <span class ="inancemanager"><input type = "radio" name ="userid" id="FinanceManager" >Finance Manager</input></span><br>
+                <input type =button onclick ="submit_link()" value ="submit"/>
             </div>
             </div>
             </center>

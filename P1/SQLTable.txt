@@ -1,5 +1,5 @@
 Tables:
-	1. Reimbursments 
+	1. reimbursments 
 		-id pk serial
 		-amount float
 		-submitted timestamped
@@ -11,7 +11,7 @@ Tables:
 		-resolver_id int foriegn key references to id from users
 		-status int foriegn key references to id from reimbursment_status
 		-reimbursment_type_id int foriegn key references to id from reimbursment_types
-	2. Users
+	2. users
 		-id pk serial
 		-username text cannot be null
 		-password text cannot be null

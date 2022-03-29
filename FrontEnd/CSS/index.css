@@ -9,8 +9,17 @@
 }
 .submit{
     padding-top: 5px; 
-    padding-left: 115px;
+    padding-left: 95px;
 }
 .register{
     padding-right: 270px;
+}
+.input-box{
+    height: 220px;
+}
+.inancemanager{
+    padding-left: 60px;
+}
+.mployee{
+    padding-left: 10px;
 }
