@@ -1,15 +1,5 @@
-function radio(){
-     
-    if (document.getElementById("Employee").checked == true){
-        document.getElementById("Employee").value =1;
-        document.getElementById("FinanceManager").value =0;
-    } else {
-        document.getElementById("Employee").value =0;
-        document.getElementById("FinanceManager").value =1;
-    }
-}
 
-const BASE_API_URL = "http://localhost:8080/projectone.main";
+const BASE_API_URL = "http://localhost:8080/api";
 const Recourse_URL = `${BASE_API_URL}/users`;
 
 async function createUser(){
@@ -20,24 +10,26 @@ async function createUser(){
     const lName = document.getElementById('lName').value;
     const userId = document.getElementById('role_id').value;
     
+
+
+    const user ={
+        username: username,
+        password: password,
+        first_name: fName,
+        last_name: lName,
+        role_id: role_id,
+    };
+
+    const userJSON = JSON.stringify(user);
+
+    //posting information to servlet
+
+    const response = await fetch(RESOURCE_URL, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        },
+        body: userJSON,
+    });
+
 }
-
-const user ={
-    username: username,
-    password: password,
-    first_name: fName,
-    last_name: lName,
-    role_id: role_id,
-};
-
-const userJSON = JSON.stringify(user);
-
-//posting information to servlet
-
-const response = await fetch(RESOURCE_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: userJSON,
-  });
