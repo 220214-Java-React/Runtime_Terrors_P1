@@ -24,15 +24,15 @@
                 <input type ="text" id="email" name ="Email" required />
                 <p class = "password">Password:</p>
                 <input type="password" id="pwd" name="Password" required />
-                <p class = "rpassword">Reconfirm password:</p>
-                <input type="password" id="pwd1" name="Password1" required />
                 <p class ="fname">First Name:</p>
                 <input type ="text" id="fName" name ="fName" required />
                 <p class ="lname">Last Name:</p>
                 <input type ="text" id="LName" name ="LName" required /><br><br>
-                <span class ="employee"><input type = "radio" name ="userid" id ="Employee" checked = "checked">Employee</input><br></span>
-                <span class ="financemanager"><input type = "radio" name ="userid" id="FinanceManager">Finance Manager</input></span>
-                <div class = "submit"><button>Submit</button></div>
+                <select name="role_id" id="role_id">
+                    <option value="employee">Employee</option>
+                    <option value="finance_manager">FinanceManager</option>
+                </select>
+                <br><br><button onclick="createUser()">Submit</button>
                 </div>
                 </center>
             </form>
