@@ -1,6 +1,7 @@
 
 const BASE_API_URL = "http://localhost:8080/api/users";
-const RESOURCE_URL = `${BASE_API_URL}/users`;
+// const RESOURCE_URL = `${BASE_API_URL}/users`; will do something with this once I affirm it is functional...
+
 
 async function createUser(){
     const username = document.getElementById('username').value;
@@ -16,9 +17,9 @@ async function createUser(){
         username: username,
         email: email,
         password: password,
-        first_name: firstName,
-        last_name: lastName,
-        role_id: roleID,
+        firstName: firstName,
+        lastName: lastName,
+        roleID: roleID,
     };
 
     const userJSON = JSON.stringify(user);
@@ -33,8 +34,9 @@ async function createUser(){
         body: userJSON,
     });
     if (response.status == 200) {
-
+        
       } else {
-
+        
       }
+      console.log(username);
 }
