@@ -3,7 +3,7 @@
     <head>
         <title>Runtime Terror P1</title>
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
-        <link rel ="stylesheet" type ="text/css" href="CSS/index.css"
+        <link rel ="stylesheet" type ="text/css" href="CSS/index.css">
         <meta charset="UTF-8">
         <script type="text/javascript" src="./JavaScripts/index.js" defer></script>
     </head>
@@ -12,25 +12,24 @@
         
     </header>
     <Body>
-        <div class = "ad"></div>
+        
         
         <div class = "login">        
         <center><div class = "denoter"><p>Login</p></div></center>
-        <form>
+        
             <center>
             <div class ="input-box">
             <p class = "username">Username:</P>
             <input type="text" id="username" name="Username">
             <p class = "password">Password:</p>
-            <input type="password" id="pwd" name="Password"><br>
+            <input type="password" id="pwd" name="Password"><br><br>
             
-            <div class = "submit">
-                <span class = "mployee"><input type = "radio" name ="userid" id ="Employee" checked>Employee</input><br></span>
-                <span class ="inancemanager"><input type = "radio" name ="userid" id="FinanceManager" >Finance Manager</input></span><br>
-                <input type =button onclick ="submit_link()" value ="submit"/>
-            </div>
+                <button onclick="login()">Submit</button>
             </div>
             </center>
-        </form>
+        </div>
+        
         <center class = "register" class = "register"><a href = "HTML/register.html">Register</a></center>
+
+    </Body>
 </html>

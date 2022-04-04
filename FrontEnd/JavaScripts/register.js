@@ -1,6 +1,6 @@
 
-const BASE_API_URL = "http://localhost:8080/api/users";
-// const RESOURCE_URL = `${BASE_API_URL}/users`; will do something with this once I affirm it is functional...
+const BASE_API_URL = "http://localhost:8080/api";
+const RESOURCE_URL = `${BASE_API_URL}/users`;
 
 
 async function createUser(){
@@ -26,17 +26,24 @@ async function createUser(){
 
     //posting information to servlet
 
-    const response = await fetch(BASE_API_URL, {
+    const response = await fetch(RESOURCE_URL, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
         },
         body: userJSON,
+        
     });
-    if (response.status == 200) {
-        
+    if (response.status == 204) {
+       alert("Successfully Registered!");
+        document.getElementById('username').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('fName').value = "";
+        document.getElementById('lName').value = "";
+        document.getElementById('pwd').value = "";
+        location.href = "./../index.html";
       } else {
-        
+        alert("Something went wrong...");
       }
-      console.log(username);
+     
 }
