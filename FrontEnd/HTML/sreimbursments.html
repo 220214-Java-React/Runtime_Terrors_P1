@@ -12,22 +12,21 @@
     </header>
     <body>
         <center>
+            <!-- <p>Current user <span id = "currentUsername"></span></p> -->
             <a href = "employe.html"><button>Go back</button></a>
             <span class = "logout"><a href = "./../index.html"><button>Log out</button></a></span><br><br>
         <div class = "input-box">
             <h2>Reimbursment</h2><br>
-            <form method="POST" enctype="multipart/form-data">
-            <input type = "radio" name ="reimbursementId" id="lodging" checked = "checked"><span class = "lodging"> Lodging</span><br>
-            <input type="radio" name="reimbursementId" id="travel"><span class ="travel">Travel </span><br>
-            <input type="radio" name="reimbursementId" id="food" ><span class = "food">Food</span><br>
-            <input type="radio" name="reimbursementId" id="other"><span class ="other">Other</span><br>
+            <select name="reimbursement_type_id" id="reimbursement_type_id">
+                <option value="1">lodging</option>
+                <option value="2">travel</option>
+                <option value="3">food</option>
+                <option value="4">other</option>
+            </select><br><br>
             <input type="text" name ="Amount" id="amount" class="amount">$ Amount<br><br>
-            <textarea type="text" name ="Description" id = "description" placeholder="Enter Description of request here"  class ="description"></textarea>
+            <textarea type="text" name ="Description" id = "description" placeholder="Enter Description of request here"  class ="description"></textarea><br><br>
+            <button>Submit</button>
             
-            <input type="file" name="myimage" class="file"><br><br>
-            
-            <input type="submit" name="submit_form" value="Submit">
-            </form>
         </div>
         </center>
     </body>

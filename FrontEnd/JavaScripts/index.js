@@ -36,7 +36,7 @@ async function login(){
         location.href = 'HTML/finance.html';
     }else if(user_role == 2){
         location.href = 'HTML/employe.html';
-    } else{
+    } else if(response.status == 401){
         alert("Something went wrong!")
         document.getElementById('username').value = "";
         document.getElementById('pwd').value = "";
