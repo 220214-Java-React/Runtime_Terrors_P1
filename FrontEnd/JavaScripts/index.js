@@ -31,7 +31,7 @@ async function login(){
 
     
     localStorage.setItem('currentUser', response.id);
-    localStorage.setItem('currentUsername', response.username);
+    // localStorage.setItem('currentUsername', response.username);
     if(user_role==1){
         location.href = 'HTML/finance.html';
     }else if(user_role == 2){
