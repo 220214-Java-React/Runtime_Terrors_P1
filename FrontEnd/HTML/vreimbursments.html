@@ -6,27 +6,51 @@
         <link rel="stylesheet" type="text/css" href="./../CSS/vreimbursments.css">
         <meta charset="UTF-8">
         <script src="./../JavaScripts/JavaScript.js" defer></script>
+        <script src="./../JavaScripts/vreimbursments.js" defer></script>
     </head>
     <header>
         <h2 class ="head-box"><center>Runtime Terrors Reimbursment</center></h2>
     </header>
     <body>
         <h2><center>Viewing Reimbursements!</center></h2>
-        <span class = "back"><a href = "./employe.html"><button>Go back</button></a></span>
+        <center>
+        <span><a href = "./employe.html"><button>Go back</button></a></span>
         <span class = "logout"><a href = "./../index.html"><button>Log out</button></a></span>
-       <table>
-        <tr>
-            <Td class = "lodging"><button onclick = "lodging()">Lodging</button></Td>
-        </tr>
-        <tr>
-            <td class ="travel"><button>Travel</button></td>
-        </tr>
-        <tr>
-            <td class ="food"><button>Food</button></td>
-        </tr>
-        <tr>
-            <td class = "other"><button>Other</button></td>
-        </tr>
-       </table>
+        </center>
+        <center>
+            <table>
+                <tr>
+                    <td>Status code:</td> 
+                    
+                    <td><center>1</center></td>
+                    <td><center>2</center></td>
+                    <td><center>3</center></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Prending</td>
+                    <td>Approved</td>
+                    <td>Denied</td>
+                </tr> 
+            </table>
+            <table>
+                <tr>
+                    <td>Type code: </td> 
+                    
+                    <td><center>1</center></td>
+                    <td><center>2</center></td>
+                    <td><center>3</center></td>
+                    <td><center>4</center></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Lodging</td>
+                    <td>Travel</td>
+                    <td>Food</td>
+                    <td>Other</td>
+                </tr> 
+            </table>
+            <div id="content"></div>
+       </center>
     </body>
 </html>

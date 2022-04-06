@@ -22,3 +22,24 @@ padding-bottom: 20px;
 .back{
     padding-left: 1100px;
 }
+
+.reimburse{
+    border: 2px solid;
+    padding-top: 10px;
+    width: 30%;
+    background-color:rgb(194, 194, 194);
+    margin: 5px;
+}
+.reimburse:hover{
+    background-color: rgb(220, 223, 224);
+}
+
+table{
+    border:1px solid;
+}
+td{
+    border:1px solid;
+}
+tr{
+    border:1px dotted;
+}

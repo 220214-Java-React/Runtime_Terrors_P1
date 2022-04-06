@@ -13,17 +13,20 @@
     </header>
     <Body>
         
-        
+        <!--Pushes the box down to make nice spacing from the top-->
         <div class = "login">        
-        <center><div class = "denoter"><p>Login</p></div></center>
+        <center><!--Creates a blue box to state what the page is--><div class = "denoter"><p>Login</p></div></center>
         
             <center>
+                <!--makes the box to wrap the content on page-->
             <div class ="input-box">
+                <!-- Is used for username -->
             <p class = "username">Username:</P>
             <input type="text" id="username" name="Username">
+            <!-- Handles password containing -->
             <p class = "password">Password:</p>
             <input type="password" id="pwd" name="Password"><br><br>
-            
+            <!-- on submit will submit form  to localhost:8080/api/auth -->
                 <button onclick="login()">Submit</button>
             </div>
             </center>

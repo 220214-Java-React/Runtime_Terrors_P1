@@ -1,3 +1,4 @@
+
 const BASE_API_URL = "http://localhost:8080/api";
 const RESOURSE_URL = `${BASE_API_URL}/reimburse`;
 
@@ -6,10 +7,11 @@ window.onload = getReimbursements;
 
 function getReimbursements(){
     
-    const author_id = localStorage.getItem('currentUser');
+    const resolver_id = localStorage.getItem('currentUser');
+    console.log(resolver_id);
 
 
-    fetch (`${RESOURSE_URL + "?author_id=" + author_id + "&id=" + 0 + "&status=" + 0 + "&resolverID=" + 0 }`)
+    fetch (`${RESOURSE_URL + "?author_id=" + 0 + "&id=" + 0 + "&status=" + 0 + "&resolverID=" + localStorage.getItem('currentUser') }`)
     .then(response => response.json())
     .then((data) => createReimbursementEle(data));
     

@@ -4,14 +4,13 @@ const RESOURSE_URL = `${BASE_API_URL}/reimburse`;
 
 
 // 
+
+
+async function submit(){
 const authorID = localStorage.getItem('currentUser');
-document.getElementById("currentUsername").innerHTML = authorID;
 const reimbursement_type_id = document.getElementById('reimbursement_type_id').value;
 const amount = document.getElementById('amount').value;
 const description = document.getElementById('description').value;
-
-async function submit(){
-
     
 
     const user ={
@@ -23,7 +22,7 @@ async function submit(){
     };
 
     const userJSON = JSON.stringify(user);
-
+   
     const response = await fetch(RESOURSE_URL, {
         method: "POST",
         headers: {

@@ -2,9 +2,6 @@
 const BASE_API_URL = "http://localhost:8080/api";
 const RESOURSE_URL = `${BASE_API_URL}/auth`;
 
-// let user_ID = 0;
-// let user_role = 0;
-
 
 async function login(){
 
@@ -26,12 +23,10 @@ async function login(){
         body: userJSON,
         
     }).then(response => response.json());
-    console.log(response);
     let user_role = response.roleID;
 
     
     localStorage.setItem('currentUser', response.id);
-    // localStorage.setItem('currentUsername', response.username);
     if(user_role==1){
         location.href = 'HTML/finance.html';
     }else if(user_role == 2){
