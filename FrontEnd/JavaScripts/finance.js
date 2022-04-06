@@ -151,9 +151,11 @@ function deny1(reimburse, amount) {
 
     if (response1.status== 204){
         alert("Denied")
+        window.open('mailto:justin204@revature.net')
         location.reload();
     }else{
         alert("Denied")
+        window.open('mailto:justin204@revature.net')
         location.reload();
     }
 }
@@ -184,6 +186,7 @@ function approve1(reimburse, amount) {
     if (response.status = 204){
         alert("Approved")
         location.reload();
+        window.open('mailto:justin204@revature.net')
     }else{
         alert(response.status)
     }

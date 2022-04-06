@@ -26,6 +26,7 @@ async function login(){
     let user_role = response.roleID;
 
     
+    
     localStorage.setItem('currentUser', response.id);
     if(user_role==1){
         location.href = 'HTML/finance.html';
