@@ -3,7 +3,6 @@ const RESOURSE_URL = `${BASE_API_URL}/reimburse`;
 
 window.onload = getReimbursements;
 
-
 function getReimbursements(){
     
     const resolver_id = localStorage.getItem('currentUser');
@@ -32,8 +31,6 @@ function createReimbursement(reimburse){
     var formatted;
 
     if(reimburse.resolved = null){
-        formatted = "Not Resolved"
-    }else{
         var timestamp = reimburse.resolved;
         var date = new Date(timestamp);
     //      ToDo: come back if have time!!!!
@@ -42,7 +39,9 @@ function createReimbursement(reimburse){
         "/"+date.getFullYear()+
         " "+date.getHours()+
         ":"+date.getMinutes()+
-        ":"+date.getSeconds());
+        ":"+date.getSeconds());       
+    }else{
+        formatted = "Not Resolved"
     }
 
 
@@ -61,19 +60,23 @@ function createReimbursement(reimburse){
 
     const reimbursementElement = document.createElement("div");
     reimbursementElement.setAttribute("class", "reimburse");
+    reimbursementElement.setAttribute("onclick", "edit(this)")
+
+    
+     
 
     const cont = document.createElement("p");
-    cont.textContent="Id: " + reimburse.id;
-    cont.id = "id";
-    localStorage.setItem('id', reimburse.id)
+    cont.textContent=reimburse.id;
+    cont.id = reimburse.id;
+    // localStorage.setItem('id', reimburse.id)
 
     const author = document.createElement("p");
     author.textContent="Author: " + reimburse.authorID;
 
     const amount = document.createElement("p");
     amount.textContent="Amount: $" + reimburse.amount;
-    amount.id = "amount";
-    localStorage.setItem('amount', reimburse.amount);
+    amount.id = reimburse.amount;
+    
 
     const submitted = document.createElement("p");
     submitted.textContent=formattedSub;
@@ -87,32 +90,18 @@ function createReimbursement(reimburse){
     const resolver = document.createElement("p");
     resolver.textContent="Resolver ID: " + reimburse.resolverID;
 
-    // Creating Approve or deny by making an array list
-    // var myParent = document.body;
-    // var array = ["", "", "Approved","Deny"]
-    // First 2 elements are blank because in data base Approve is 2 and Deny is 3 I did it this way because I would have to refactor everything else if i did not.
 
-    // const status = document.createElement("select");
-    // status.id = "mySelect";
-
-    // for (var i = 2; i<array.length; i++) {
-    //     var option = document.createElement("option");
-    //     option.value = array[i];
-    //     option.text = array[i];
-    //     status.appendChild(option);
-        
-    // }
-
-    // const status =document.createElement("select");
-    // status.options = "Approve", "Deny";
     
         const approve = document.createElement("button");
         approve.textContent="Approve"
-        approve.onclick= approve1;
+        approve.onclick= function(){approve1(reimburse.id, reimburse.amount)};
+        approve.setAttribute("hidden", "true");
+        
 
         const deny = document.createElement("button");
         deny.textContent="Deny"
-        deny.onclick= deny1;
+        deny.onclick= function(){deny1(reimburse.id, reimburse.amount)};
+        deny.setAttribute("hidden", "true");
 
     
 
@@ -136,15 +125,15 @@ function createReimbursement(reimburse){
 
 }
 
-function deny1() {
+function deny1(reimburse, amount) {
     
-
+    
     const user ={
-        amount: localStorage.getItem('amount'),
+        amount: amount,
         paymentID : 1,
         resolverID: localStorage.getItem('currentUser'),
         status: 3,
-        id: localStorage.getItem('id')
+        id: reimburse
     };
 
     const userJSON = JSON.stringify(user);
@@ -170,13 +159,13 @@ function deny1() {
 }
 
 
-function approve1() {
+function approve1(reimburse, amount) {
     const user ={
-        amount: localStorage.getItem('amount'),
+        amount: amount,
         paymentID : 1,
         resolverID: localStorage.getItem('currentUser'),
         status: 2,
-        id: localStorage.getItem('id')
+        id: reimburse
     };
 
     const userJSON = JSON.stringify(user);
@@ -197,5 +186,21 @@ function approve1() {
         location.reload();
     }else{
         alert(response.status)
+    }
+}
+
+function edit(element){
+    const approve = element.children[8]
+    const deny = element.children[9];
+
+    if(isHidden(approve && deny)){
+        approve.removeAttribute("hidden");
+        deny.removeAttribute("hidden");
+    } else {
+        approve.setAttribute("hidden","true");
+        deny.setAttribute("hidden", "true");
+    }
+    function isHidden(element){
+        return element.hasAttribute("hidden");
     }
 }

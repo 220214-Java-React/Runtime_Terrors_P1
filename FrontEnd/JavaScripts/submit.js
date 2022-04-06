@@ -31,15 +31,15 @@ function createReimbursementEle(reimbursementData){
 
 function createReimbursement(reimburse){
 
-    var formatted;
 
     if(reimburse.resolved = null){
+        
         formatted = "Not Resolved"
     }else{
         var timestamp = reimburse.resolved;
         var date = new Date(timestamp);
     //      ToDo: come back if have time!!!!
-        formatted = ("Time Resolved: "+date.getDate()+
+        var formatted = ("Time Resolved: "+date.getDate()+
         "/"+(date.getMonth()+1)+
         "/"+date.getFullYear()+
         " "+date.getHours()+
